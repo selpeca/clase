@@ -5,7 +5,7 @@ include('header.php')
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-12">
-                            <h1 class="mt-4">Hola, <?php echo $_SESSION['email']; ?></h1>
+                            <h1 class="mt-4">Hola, <?php echo $_SESSION['username']; ?></h1>
                         </div>
                     </div>
                     <div class="row mt-4">

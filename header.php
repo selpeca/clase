@@ -1,5 +1,9 @@
 <?php
 session_start();
+if (!isset($_SESSION['username'])) {
+    header('Location: index.php');
+}
+
 ?>
 <!doctype html>
 <html lang="es">
@@ -49,7 +53,7 @@ session_start();
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link">
+                        <a href="cerrar_sesion.php" class="nav-link">
                             <i class="fas fa-right-from-bracket"></i>
                             <span class="text-white">Cerrar sesión</span>
                         </a>

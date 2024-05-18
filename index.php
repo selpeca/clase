@@ -25,8 +25,8 @@
                   </div>
                   <form action="accion.php" method="POST">
                     <div class="form-outline mb-4">
-                      <input type="email" id="email" name="email" class="form-control" placeholder="Dirección de correo electronico"/>
-                      <label class="form-label" for="email">Email</label>
+                      <input type="text" id="username" name="username" class="form-control" placeholder="Ingresa tu usuario"/>
+                      <label class="form-label" for="username">Username</label>
                     </div>
                     <div class="form-outline mb-4">
                       <input type="password" id="password" name="password" class="form-control"/>
