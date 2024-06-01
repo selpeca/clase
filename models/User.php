@@ -9,14 +9,12 @@ class User{
     public $is_active;
     private $password;
 
-    public function __CONSTRUCT()
-	{
-		try
-		{
-                
-		}
-		catch(Exception $e)
-		{
+    public function __construct()
+    {
+		try{
+            //Conectando a la bd
+            $this->db = new mysqli('localhost:3307', 'root', '', 'clase');
+		}catch(Exception $e){
 			die($e->getMessage());
 		}
 	}
