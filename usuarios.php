@@ -6,6 +6,7 @@ $usuarios = $db->query($sql);
 <div class="row">
     <div class="col-12">
         <h1 class="mt-4">Listar usuarios</h1>
+        <a href="usuario_crear.php" class="btn btn-success"><i class="fas fa-add"></i> Nuevo</a>
     </div>
 </div>
 <div class="row mt-4">

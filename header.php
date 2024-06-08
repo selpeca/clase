@@ -41,9 +41,9 @@ require_once 'conexion.php';
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="jugadores.php" class="nav-link">
+                        <a href="selecciones.php" class="nav-link">
                             <i class="fas fa-futbol text-white"></i>
-                            <span class="text-white">Jugadores</span>
+                            <span class="text-white">Selecciones</span>
                         </a>
                     </li>
                     <li class="nav-item">
