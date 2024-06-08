@@ -35,9 +35,7 @@ $seleccion = $db->query($sql)->fetch_assoc();
         </div>
         <div class="mb-3">
             <label for="url_bandera" class="form-label">Bandera</label>
-            <textarea name="url_bandera" id="url_bandera">
-                <?=  $seleccion['url_bandera'] ?>
-            </textarea>
+            <textarea name="url_bandera" id="url_bandera" class="form-control"><?=  $seleccion['url_bandera'] ?></textarea>
         </div>
 
         <input type="hidden" name="accion" value="1">
