@@ -9,10 +9,11 @@ if (isset($_POST['accion'])){
     $url_bandera = $_POST['url_bandera'];
     $id = $_POST['id'];
 
-    $sql = "UPDATE selecciones (nombre, grupo, url_bandera) 
-            values (
-                '$nombre','$grupo','$url_bandera'
-            )
+    $sql = "UPDATE selecciones 
+            SET
+                nombre = '$nombre', 
+                grupo = '$grupo', 
+                url_bandera='$url_bandera'
             WHERE id = $id;";
     $result = $db->query($sql);
     $db->close();
