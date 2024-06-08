@@ -10,16 +10,23 @@ if (isset($_POST['accion'])){
     $pais_id = $_POST['pais_id'];
 
 
-    $sql = "INSERT INTO users (username,password) values ('$username',MD5('$password'));";
+    $sql = "INSERT INTO jugadores (nombre, equipo, pais_club, puesto, pais_id) 
+            values (
+                '$nombre',
+                '$equipo',
+                '$pais_club',
+                '$puesto',
+                $pais_id
+            );";
     $result = $db->query($sql);
     $db->close();
     if($result) {
-        $_SESSION['flash_message'] = "Usuario creado";
+        $_SESSION['flash_message'] = "Registro creado";
     }else{
-        $_SESSION['flash_message'] = "Error al crear usuario";
+        $_SESSION['flash_message'] = "Error al crear registro";
     
     }
-    header('LOCATION: usuarios.php');
+    header('LOCATION: selecciones.php');
 }
 ?>
 <div class="row">
