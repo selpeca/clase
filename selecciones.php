@@ -20,6 +20,7 @@ $grupoD = $db->query($sqlD);
     <thead>
         <tr>
             <th scope="col">id</th>
+            <th scope="col">Bandera</th>
             <th scope="col">Nombre</th>
             <th scope="col">...</th>
         </tr>
@@ -29,6 +30,7 @@ $grupoD = $db->query($sqlD);
             foreach ($grupoA as $equipo) {
                 echo "<tr>";
                 echo "<td>". $equipo['id'] . "</td>";
+                echo "<td><img src='". $equipo['url_bandera'] . "' width='100px' /></td>";
                 echo "<td>". $equipo['nombre'] . "</td>";
                 echo "<td>
                     <a href='selecciones_editar.php?id=".  $equipo['id'] ."' class='btn btn-secondary'>Editar</a>
@@ -45,6 +47,7 @@ $grupoD = $db->query($sqlD);
     <thead>
         <tr>
             <th scope="col">id</th>
+            <th scope="col">Bandera</th>
             <th scope="col">Nombre</th>
             <th scope="col">...</th>
         </tr>
@@ -54,6 +57,7 @@ $grupoD = $db->query($sqlD);
             foreach ($grupoB as $equipo) {
                 echo "<tr>";
                 echo "<td>". $equipo['id'] . "</td>";
+                echo "<td><img src='". $equipo['url_bandera'] . "' width='100px' /></td>";
                 echo "<td>". $equipo['nombre'] . "</td>";
                 echo "<td>
                     <a href='selecciones_editar.php?id=".  $equipo['id'] ."' class='btn btn-secondary'>Editar</a>
@@ -70,6 +74,7 @@ $grupoD = $db->query($sqlD);
     <thead>
         <tr>
             <th scope="col">id</th>
+            <th scope="col">Bandera</th>
             <th scope="col">Nombre</th>
             <th scope="col">...</th>
         </tr>
@@ -79,6 +84,7 @@ $grupoD = $db->query($sqlD);
             foreach ($grupoC as $equipo) {
                 echo "<tr>";
                 echo "<td>". $equipo['id'] . "</td>";
+                echo "<td><img src='". $equipo['url_bandera'] . "' width='100px' /></td>";
                 echo "<td>". $equipo['nombre'] . "</td>";
                 echo "<td>
                     <a href='selecciones_editar.php?id=".  $equipo['id'] ."' class='btn btn-secondary'>Editar</a>
@@ -95,6 +101,7 @@ $grupoD = $db->query($sqlD);
     <thead>
         <tr>
             <th scope="col">id</th>
+            <th scope="col">Bandera</th>
             <th scope="col">Nombre</th>
             <th scope="col">...</th>
         </tr>
@@ -104,6 +111,7 @@ $grupoD = $db->query($sqlD);
             foreach ($grupoD as $equipo) {
                 echo "<tr>";
                 echo "<td>". $equipo['id'] . "</td>";
+                echo "<td><img src='". $equipo['url_bandera'] . "' width='100px' /></td>";
                 echo "<td>". $equipo['nombre'] . "</td>";
                 echo "<td>
                     <a href='selecciones_editar.php?id=".  $equipo['id'] ."' class='btn btn-secondary'>Editar</a>
