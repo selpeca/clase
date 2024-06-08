@@ -8,17 +8,21 @@ if (isset($_POST['accion'])){
     $grupo = $_POST['grupo'];
     $url_bandera = $_POST['url_bandera'];
     $id = $_POST['id'];
-    
-    $sql = "INSERT INTO users (username,password) values ('$username',MD5('$password'));";
+
+    $sql = "UPDATE selecciones (nombre, grupo, url_bandera) 
+            values (
+                '$nombre','$grupo','$url_bandera'
+            )
+            WHERE id = $id;";
     $result = $db->query($sql);
     $db->close();
     if($result) {
-        $_SESSION['flash_message'] = "Usuario creado";
+        $_SESSION['flash_message'] = "Selección actualizada";
     }else{
-        $_SESSION['flash_message'] = "Error al crear usuario";
+        $_SESSION['flash_message'] = "Error al acutualizar seleccion";
     
     }
-    header('LOCATION: usuarios.php');
+    header('LOCATION: selecciones.php');
 }
 ?>
 <div class="row">
