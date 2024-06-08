@@ -3,7 +3,7 @@ session_start();
 if (!isset($_SESSION['username'])) {
     header('Location: index.php');
 }
-
+require_once 'conexion.php';
 ?>
 <!doctype html>
 <html lang="es">
@@ -30,33 +30,41 @@ if (!isset($_SESSION['username'])) {
                 <ul class="nav flex-column mt-3 mb-5">
                     <li class="nav-item">
                         <a href="dashboard.php" class="nav-link active">
-                            <i class="fas fa-home"></i>
+                            <i class="fas fa-home text-white"></i>
                             <span class="text-white">Inicio</span>
                         </a>
                     </li>
                     <li class="nav-item">
                         <a href="analisis.php" class="nav-link">
-                            <i class="fas fa-chart-bar"></i>
+                            <i class="fas fa-chart-bar text-white"></i>
                             <span class="text-white">Análisis</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link">
-                            <i class="fas fa-users"></i>
+                        <a href="jugadores.php" class="nav-link">
+                            <i class="fas fa-futbol text-white"></i>
+                            <span class="text-white">Jugadores</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="usuarios.php" class="nav-link">
+                            <i class="fas fa-users text-white"></i>
                             <span class="text-white">Usuarios</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link">
-                            <i class="fas fa-cog"></i>
-                            <span class="text-white">Configuración</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
                         <a href="cerrar_sesion.php" class="nav-link">
-                            <i class="fas fa-right-from-bracket"></i>
+                            <i class="fas fa-right-from-bracket text-white"></i>
                             <span class="text-white">Cerrar sesión</span>
                         </a>
                     </li>
                 </ul>
             </nav>
+            <main class="col-md-9 col-lg-10 d-md-block">
+                <div class="container-fluid">
+                    <?php
+                        if(isset($_SESSION['flash_message'])){
+                            echo '<div class="alert alert-info">'. $_SESSION['flash_message'] .'</div>';
+                            unset($_SESSION['flash_message']);
+                        }
+                    ?>
