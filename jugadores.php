@@ -32,6 +32,7 @@ $jugadores = $db->query($sql);
                     echo "<td>". $jugador['pais_club'] . "</td>";
                     echo "<td>". $jugador['puesto'] . "</td>";
                     echo "<td>
+                        <a href='jugadores_ver.php?id=".  $jugador['id'] ."' class='btn btn-primary'>Ver</a>
                         <a href='#?id=".  $jugador['id'] ."' class='btn btn-secondary'>Editar</a>
                         <a href='jugadores_eliminar.php?id=".  $jugador['id'] ."' class='btn btn-danger'>Eliminar</a>
                     </td>";
